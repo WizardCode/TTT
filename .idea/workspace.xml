@@ -4,8 +4,9 @@
     <list default="true" id="e4c775d4-a5c7-4dfc-bc3c-27df03774585" name="Default" comment="" />
     <ignored path="TTTjava.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="e4c775d4-a5c7-4dfc-bc3c-27df03774585" time="1392672085534" ignored="false" />
+    <file path="/fragment.java" changelist="e4c775d4-a5c7-4dfc-bc3c-27df03774585" time="1392674102608" ignored="false" />
     <file path="/TicTacToe.java" changelist="e4c775d4-a5c7-4dfc-bc3c-27df03774585" time="1392672319385" ignored="false" />
+    <file path="/TTTPanel.java" changelist="e4c775d4-a5c7-4dfc-bc3c-27df03774585" time="1392673839733" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +69,23 @@
       <file leaf-file-name="TicTacToe.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dynet/kjanssen/TicTacToe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="31" selection-start="445" selection-end="445" vertical-scroll-proportion="0.44061303">
+            <state line="98" column="87" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.82758623">
               <folding>
                 <element signature="e#0#2287#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TTTPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dynet/kjanssen/TTTPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="65" selection-start="2828" selection-end="2828" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#5121#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1457#1925#0" expanded="true" />
+                <element signature="e#1914#1915#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,6 +113,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/dynet/kjanssen/Proj1.java" />
+        <option value="$PROJECT_DIR$/src/com/dynet/kjanssen/TTTPanel.java" />
         <option value="$PROJECT_DIR$/src/com/dynet/kjanssen/TicTacToe.java" />
       </list>
     </option>
@@ -180,25 +196,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/com/dynet/kjanssen" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Proj1">
-    <configuration default="false" name="Proj1" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.TTTPanel">
+    <configuration default="false" name="TTTPanel" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="com.dynet.kjanssen.Proj1" />
+      <option name="MAIN_CLASS_NAME" value="com.dynet.kjanssen.TTTPanel" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -229,15 +249,32 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.Proj1" />
+      <item index="0" class="java.lang.String" itemvalue="Application.TTTPanel" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Proj1" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TTTPanel" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e4c775d4-a5c7-4dfc-bc3c-27df03774585" name="Default" comment="" />
@@ -268,7 +305,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45910096" sideWeight="0.6702479" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.201916" sideWeight="0.6702479" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -351,9 +388,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dynet/kjanssen/TTTPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="65" selection-start="2828" selection-end="2828" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#5121#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1457#1925#0" expanded="true" />
+            <element signature="e#1914#1915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dynet/kjanssen/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="445" selection-end="445" vertical-scroll-proportion="0.44061303">
+        <state line="98" column="87" selection-start="2122" selection-end="2122" vertical-scroll-proportion="0.82758623">
           <folding>
             <element signature="e#0#2287#0" expanded="true" />
           </folding>

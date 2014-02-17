@@ -96,7 +96,7 @@ class TicTacToe
 			if (positions[2][2] == positions[1][1] && positions[3][3] == positions[1][1])
 				return positions[1][1] - '0'; 
 		if (positions[1][3] != ' ')
-			if (positions[2][2] == positions[1][3] && positions[3][1] == positions[1][1])
+			if (positions[2][2] == positions[1][3] && positions[3][1] == positions[1][3])
 				return positions[1][3] - '0'; 
 		for (int r = 1; r <= 3; r++)
 			for (int c = 1; c <= 3; c++)
