@@ -20,6 +20,7 @@ public class TTTPanel extends JPanel
     private int wins [];
     private JLabel title, stats;
     private DisplayPanel display;
+    private Image imageX, imageO;
 
     TTTPanel ()
     {
@@ -38,11 +39,14 @@ public class TTTPanel extends JPanel
         stats = new JLabel ("X: " + wins[1] + " O: " + wins[2] + " Cat: " + wins[3]);
         stats.setFont (font);
         add (stats);
+        imageX = new ImageIcon(getClass().getResource("X.jpg")).getImage();
+        imageO = new ImageIcon(getClass().getResource("O.jpg")).getImage();
     }
 
     void UpdatePanel()
     {
         String who = new String ();
+        done = true;
         switch (winner)
         {
             case 1: who = "X"; break;
@@ -65,6 +69,7 @@ public class TTTPanel extends JPanel
                         + " Cat: "
                         + wins[3]);
                 stats.repaint();
+                done = false;
             }
         };
         Timer timer = new Timer(delay, taskPerformer);
@@ -107,8 +112,7 @@ public class TTTPanel extends JPanel
             TTTSquare (int R, int C)
             {
                 row = R;
-                col =
-                        C;
+                col = C;
                 setPreferredSize (new Dimension(100, 100));
                 setBackground (Color.WHITE);
                 addMouseListener (this);
@@ -123,15 +127,17 @@ public class TTTPanel extends JPanel
                 char who = ttt.GetPosition (row, col);
                 String owner = new String ();
                 if (who == '1')
-                    owner = "X";
+                    g2.drawImage(imageX, 0, 0, 100, 100, null);
+                    //owner = "X";
                 else if (who == '2')
-                    owner = "O";
-                g2.drawString (owner, 35, 60);
+                    g2.drawImage(imageO, 0, 0, 100, 100, null);
+                    //owner = "O";
+                //g2.drawString (owner, 35, 60);
             }
             public void mouseClicked (MouseEvent e)
             { // Accept user's move; update if legal
                 boolean goodMove = ttt.Play (row, col, player);
-                if (goodMove)
+                if (goodMove && !done)
                 {
                     player = player == 1 ? 2 : 1;
                     repaint();
