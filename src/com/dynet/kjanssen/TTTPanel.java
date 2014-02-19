@@ -5,7 +5,6 @@
 
 package com.dynet.kjanssen;
 
-import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -86,14 +85,18 @@ public class TTTPanel extends JPanel
             setBackground (Color.BLACK);
             squares = new TTTSquare [9];
             int s = 0;
-            for (int r =
-                         1; r <=3; r++)
+            for (int r = 1; r <=3; r++)
                 for (int c = 1; c <= 3; c++)
                 {
                     squares[s] = new TTTSquare (r, c);
                     add (squares[s]);
                     s++;
                 }
+        }
+
+        public void paintSquares () {
+            for (int s = 0; s < 9; s++)
+                squares[s].repaint();
         }
 
         public void paintComponent (Graphics g)
@@ -125,14 +128,10 @@ public class TTTPanel extends JPanel
                         RenderingHints.VALUE_ANTIALIAS_ON);
                 g2.setFont (font);
                 char who = ttt.GetPosition (row, col);
-                String owner = new String ();
                 if (who == '1')
                     g2.drawImage(imageX, 0, 0, 100, 100, null);
-                    //owner = "X";
                 else if (who == '2')
                     g2.drawImage(imageO, 0, 0, 100, 100, null);
-                    //owner = "O";
-                //g2.drawString (owner, 35, 60);
             }
             public void mouseClicked (MouseEvent e)
             { // Accept user's move; update if legal
@@ -144,6 +143,28 @@ public class TTTPanel extends JPanel
                     winner = ttt.Test();
                     if (winner > 0)
                         UpdatePanel ();
+                    else {
+                        goodMove = ttt.MakeBestPlay (player);
+                        if (goodMove && !done)
+                        {
+                            player = player == 1 ? 2 : 1;
+
+                            int delay = 500; //milliseconds
+                            ActionListener taskPerformer = new ActionListener()
+                            {
+                                public void actionPerformed(ActionEvent evt)
+                                {
+                                    paintSquares();
+                                    winner = ttt.Test();
+                                    if (winner > 0)
+                                        UpdatePanel ();
+                                }
+                            };
+                            Timer timer = new Timer(delay, taskPerformer);
+                            timer.setRepeats(false);
+                            timer.start();
+                        }
+                    }
                 }
             }
             public void mousePressed (MouseEvent event) {}

@@ -7,6 +7,8 @@ package com.dynet.kjanssen;
 //import java.io.*;
 //import java.util.*;
 
+import java.util.Random;
+
 class TicTacToe
 {
 	private	char [][] positions;
@@ -102,6 +104,64 @@ class TicTacToe
 			for (int c = 1; c <= 3; c++)
 				if (positions[r][c] == ' ')
 					return 0;
+
+        // if cat wins
 		return 3;
 	}
+
+    public boolean MakeBestPlay (int who) {
+
+        // the number of open tiles
+        int openCount = 0;
+
+        // look for winning move
+        for (int i = 1; i <= 3; i++)
+            for (int j = 1; j <= 3; j++)
+                if (positions[i][j] == ' ') {
+                    openCount++;
+
+                    Play (i, j, who);
+                    int test = Test();
+
+                    if (test == who)
+                        return true;
+
+                    positions[i][j] = ' ';
+                }
+
+        // if no moves, return false
+        if (openCount == 0)
+            return false;
+
+        // look for blocking move
+        for (int i = 1; i <= 3; i++)
+            for (int j = 1; j <= 3; j++)
+                if (positions[i][j] == ' ') {
+                    Play(i, j, who == 1 ? 2 : 1);
+                    int test = Test();
+
+                    if (test != 0 && test != 3) {
+                        positions[i][j] = ' ';
+                        Play(i, j, who);
+                        return true;
+                    }
+
+                    positions[i][j] = ' ';
+                }
+
+        // if no winning or blocking move, pick random move
+        Random random = new Random();
+        int move = random.nextInt(openCount);
+        openCount = 0;
+
+        for (int i = 1; i <= 3; i++)
+            for (int j = 1; j <= 3; j++)
+                if (positions[i][j] == ' ' && openCount++ == move) {
+                    Play (i, j, who);
+                    return true;
+                }
+
+        // all else fails, return false
+        return false;
+    }
 }
