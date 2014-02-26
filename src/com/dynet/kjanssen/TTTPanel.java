@@ -69,6 +69,11 @@ public class TTTPanel extends JPanel
                         + wins[3]);
                 stats.repaint();
                 done = false;
+
+                if (player == 2) {
+                    ttt.MakeBestPlay (player);
+                    player = player == 1 ? 2 : 1;
+                }
             }
         };
         Timer timer = new Timer(delay, taskPerformer);
